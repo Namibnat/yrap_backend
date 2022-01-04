@@ -1,0 +1,333 @@
+body {
+    background-color: #282828;
+    color: #33ff33;
+    font-family: 'Helvetica';
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+input {
+    margin: 10px;
+    display: block;
+    background-color: #282828;
+    border: 1px solid #535252;
+    color: #33ff33;
+}
+
+input:hover {
+    background-color: #535252;
+    border: 1px solid #282828;
+    color: #33ff33;
+}
+
+#data_center {
+    position: relative;
+    padding: 2rem;
+}
+
+#commands {
+    border-top: 1px solid #535252;
+    position: fixed;
+    width: 100%;
+    top: 70%;
+    padding: 2rem;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.btn-group,
+.pomodoro-container {
+    margin: auto;
+    width: 50%;
+    padding: 0;
+}
+
+.pomodoro-container {
+    margin-top: 0.5rem;
+}
+
+.btn-group button,
+.pomodoro-container button {
+    background-color: #282828;
+    border: 1px solid #535252;
+    color: #33ff33;
+    padding: 12px 32px;
+    cursor: pointer;
+    float: left;
+}
+
+.pomodoro-element-timer {
+    background-color: #282828;
+    border: none;
+    color: #33ff33;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+
+/* Add a background color on hover */
+
+.btn-group button:hover,
+.pomodoro-container button:hover {
+    background-color: #535252;
+}
+
+.pomodoro-inner-element {
+    padding: 10.5px 20px;
+    margin: 0;
+    border: 1px solid #535252;
+    float: left;
+}
+
+.btn-group button:not(:last-child),
+.pomodoro-container button:not(:last-child),
+.pomodoro-inner-element:not(:last-child) {
+    border-right: none;
+}
+
+
+/* Clear floats (clearfix hack) */
+
+.btn-group:after,
+.pomodoro-container:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-manage {
+    background-color: #282828;
+    border: 1px solid #535252;
+    border-radius: 3px;
+    color: #33ff33;
+    margin: 0.5rem 0 0 0;
+    padding: 12px 32px;
+    cursor: pointer;
+}
+
+.work-pallet {
+    position: inherit;
+}
+
+.work-pallet-container {
+    position: inherit;
+}
+
+.add-new-study-item-pop-up {
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    background-color: #282828;
+    border: none;
+    /* opacity: 0.5; */
+    background-color: rgba(51, 255, 51, 0.1);
+}
+
+.add-new-study-item-pop-up-inner {
+    position: relative !important;
+    padding: 4rem;
+    margin: 3rem 20% auto 20%;
+    border-radius: 3px;
+    background-color: #282828;
+    border: 1px solid #535252;
+    border-radius: 12px;
+}
+
+.add-new-study-item-pop-up-inner label {
+    background-color: #282828;
+    color: #c0186c;
+    padding: .3rem;
+    margin: 2rem 0 -1.5rem 1rem;
+    cursor: pointer;
+}
+
+.add-new-study-item-pop-up-inner input:not([type="checkbox"]),
+.work-on-study-item-page input:not([type="checkbox"]) {
+    background-color: #282828;
+    border: 1px solid #535252;
+    border-radius: 12px;
+    color: #33ff33;
+    padding: 0.7rem 0.3rem 0.7rem 1.5rem;
+    margin: auto 0 1rem 0;
+    cursor: pointer;
+    display: block;
+    width: 70%;
+}
+
+.add-new-study-item-pop-up-inner input:not([type="checkbox"]) input:focus,
+.add-new-study-item-pop-up-inner input:not([type="checkbox"]) input:not(:focus),
+.work-on-study-item-page input:not([type="checkbox"]) input:focus,
+.work-on-study-item-page input:not([type="checkbox"]) input:not(:focus) {
+    background-color: #535252;
+    border: 1px solid #282828;
+    color: #33ff33;
+}
+
+.submit {
+    background-color: #282828;
+    border: 1px solid #535252;
+    border-radius: 12px;
+    color: #33ff33;
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    margin: 1.5rem 0 auto 0;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.close-pop-up {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    height: 2.5rem;
+    font-size: 2rem;
+    width: 2.5rem;
+    background-color: #282828;
+    border: 1px solid #535252;
+    border-radius: 12px;
+    color: #33ff33;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.close-pop-up:hover,
+.submit:hover {
+    background-color: #535252;
+}
+
+.add-new-study-authors-pop-up {
+    position: fixed;
+    left: 25rem;
+    right: 25rem;
+    top: 5rem;
+    z-index: 2;
+    bottom: 5rem;
+    background-color: #282828;
+    border: 1px solid #535252;
+    border-radius: 12px;
+    color: #33ff33;
+    padding: 0.7rem 0.3rem 0.7rem 1.5rem;
+}
+
+.add-new-study-authors-pop-up .limitLength {
+    height: 10rem !important;
+}
+
+.work-pallet-container .limitLength {
+    height: 20rem !important;
+}
+
+.limitLength {
+    overflow-y: scroll;
+    width: 40%;
+    border: 1px solid #535252;
+    padding: 0 0 0 2rem;
+    border-radius: 12px;
+}
+
+.add-new-study-authors-pop-up .container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.add-new-study-authors-pop-up input[type="checkbox"] {
+    display: inline-block;
+}
+
+.add-new-study-authors-pop-up button.tick-mark {
+    display: none;
+    position: relative;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #282828;
+    border: none;
+}
+
+.add-new-study-authors-pop-up button.tick-mark::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 50%;
+    width: 3px;
+    background-color: #33ff33;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+.add-new-study-authors-pop-up button.tick-mark::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #33ff33;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+.add-new-study-authors-pop-up button.no-tick-mark {
+    display: inline-block;
+    position: relative;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #282828;
+    border: 1px solid #33ff33;
+    border-radius: 6px;
+}
+
+.work-on-study-item-page {
+    z-index: 1;
+    position: fixed;
+    display: block;
+    top: 1rem;
+    bottom: 33%;
+    left: 1rem;
+    right: 1rem;
+    background-color: #282828;
+    border: 1px solid #33ff33;
+    border-radius: 6px;
+    padding: 0;
+    margin: 0;
+}
+
+.work-on-study-item-page-inner {
+    position: relative;
+    padding: 1rem;
+    margin: 0;
+}
+
+.manage-work-study {
+    margin: 0;
+    padding: 0;
+    width: 48%;
+    float: left;
+}
+
+.graph-image {
+    width: 100%;
+    height: 96%;
+}
+
+.work-pallet-container label,
+.work-pallet-container input {
+    display: inline-block;
+}

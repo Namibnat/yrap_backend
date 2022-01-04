@@ -1,0 +1,4 @@
+
+*.env.dev
+*.env.prod__pycache__/
+*.py[cod]

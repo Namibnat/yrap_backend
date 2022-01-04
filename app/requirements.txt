@@ -1,0 +1,9 @@
+Django
+pillow
+psycopg2-binary
+djangorestframework
+markdown
+django-filter
+numpy
+pandas
+matplotlib

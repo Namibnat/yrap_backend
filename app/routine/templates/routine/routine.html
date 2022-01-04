@@ -1,0 +1,28 @@
+{% extends "routine/base.html" %}
+
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content%}
+
+    {% verbatim %}
+
+    <div id="app" v-cloak>
+
+    </div>
+
+    {% endverbatim %}
+
+{% endblock content %}
+
+{% block base_scripts %}
+    <script src="https://unpkg.com/vue@next"></script>
+    {% load static %}
+    <script src={% static 'routine/js/routine.js' %}></script>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
